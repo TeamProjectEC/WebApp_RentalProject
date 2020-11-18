@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using DataBase;
 namespace WebApp
 {
     /// <summary>
@@ -24,5 +24,28 @@ namespace WebApp
         {
             InitializeComponent();
         }
-    }
+
+
+
+        private void Button_Click_Home(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Login(object sender, RoutedEventArgs e)
+        {
+            var login_obj = new Login();
+            login_obj.Show();
+        }
+
+        private void Button_Click_Register(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_About(object sender, RoutedEventArgs e)
+        {
+
+        }
+    } 
 }

@@ -1,0 +1,40 @@
+﻿<Window x:Class="WebApp.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebApp"
+        mc:Ignorable="d"
+        Title="Login" Height="470" Width="500">
+    <Grid>
+        <Rectangle Height="200" VerticalAlignment="Top" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF0DBDFF" Offset="1"/>
+                    <GradientStop Color="#FF151215" Offset="0.573"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="images\loggin_img.png" Width="150" Height="150" VerticalAlignment="Top" />
+        <Rectangle Width="330" Margin="85,150,85,40">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.082"/>
+                    <GradientStop Color="#FFE5E5F4" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+
+            </Rectangle.Effect>
+
+        </Rectangle>
+        <Label Content="Username"  Margin="106,167,106,261" Foreground="White" FontWeight="Bold" FontSize="14" />
+        <TextBox x:Name="user_name" TextWrapping="Wrap" Margin="106,193,106,227" TextChanged="user_name_TextChanged"/>
+        <Label Content="Password"  Margin="106,232,106,194" Foreground="White" FontWeight="Bold" FontSize="14" />
+        <TextBox x:Name="password" TextWrapping="Wrap" Margin="106,265,106,154" TextChanged="password_TextChanged" />
+        <Button Content="Logga in" Margin="150,336,150,85" Click="Button_Click" Background="#FF63C786" FontWeight="Bold" FontSize="16"/>
+    </Grid>
+</Window>
