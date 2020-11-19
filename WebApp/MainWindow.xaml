@@ -11,34 +11,141 @@
         Background="#252222">
 
     <Grid>
-        
-        <Grid>
-            <Grid x:Name ="nav_pnl" HorizontalAlignment="Right"  Width="70" Background="#1A1818">
-                <StackPanel x:Name="stk_pnl">
-                    <Grid Height="80" >
-                        <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                            <Button x:Name="Home" Height="40" Width="68" Content="Home" Background="#1A1818" Foreground="White" Click="Button_Click_Home" />
-                        </StackPanel>
-                    </Grid>
-                    <Grid Height="80">
-                        <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                            <Button x:Name="Login" Height="40" Width="68" Content="Loggin in" Background="#1A1818" Foreground="White" Click="Button_Click_Login"/>
-                        </StackPanel>
-                    </Grid>
-                    <Grid Height="80">
-                        <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                            <Button x:Name="Register" Height="40" Width="68" Content="Register" Background="#1A1818" Foreground="White" Click="Button_Click_Register"/>
-                        </StackPanel>
-                    </Grid>
-                    <Grid Height="80">
-                        <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                            <Button x:Name="About" Height="40" Width="68" Content="About" Background="#1A1818" Foreground="White" Click="Button_Click_About"/>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
-            </Grid>
+        <!--back_ground-->
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0F0E0E" Offset="0.51"/>
+                <GradientStop Color="#FF321616" Offset="1"/>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+        <!--header_logo-->
+        <Grid Name="nav_logo" VerticalAlignment="Top" Height="70" Margin="27,10,92,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Source="images/text_logo.png" Height="60" Width="197" HorizontalAlignment="Center" />
+            <Image Source="images/logo.png" Height="60" Width="60" HorizontalAlignment="Left" />
+        </Grid>
+        <!--right_pnl_nav-->
+        <Grid Name ="nav_pnl" HorizontalAlignment="Right"  Width="70">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF7E1C1C" Offset="1"/>
+                    <GradientStop Color="#FF3C0505" Offset="0.808"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel x:Name="stk_pnl">
+                <Grid Height="80" >
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" >
+                        <Button x:Name="Home" Height="40" Width="68" Content="Home" Foreground="White" Click="Button_Click_Home" >
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF4D1717" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Height="80">
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" >
+                        <Button x:Name="Login" Height="40" Width="68" Content="Loggin in" Foreground="White" Click="Button_Click_Login">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF4D1717" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Height="80">
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" >
+                        <Button x:Name="Register" Height="40" Width="68" Content="Register" Foreground="White" Click="Button_Click_Register" BorderBrush="Black">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF4D1717" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Height="80">
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" >
+                        <Button x:Name="About" Height="40" Width="68" Content="About" Foreground="White" Click="Button_Click_About">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF4D1717" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <!--header_menu-->
+        <Grid VerticalAlignment="Top" Height="180" Margin="27,92,92,180">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF41494F" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
 
         </Grid>
+        <!--body-menu-->
+        <Grid Background="#FF0A0D0F" VerticalAlignment="Top" Margin="27,280,103,0">
+
+            <ScrollViewer Margin="0,0,-11,0" >
+                <ScrollViewer.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF2B2828" Offset="1"/>
+                        <GradientStop Color="#FF020101"/>
+                    </LinearGradientBrush>
+                </ScrollViewer.Background>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="140" />
+                    </Grid.RowDefinitions>
+                </Grid>
+
+            </ScrollViewer>
+
+
+
+        </Grid>
+
     </Grid>
-    
+
 </Window>
