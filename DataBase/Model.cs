@@ -12,8 +12,9 @@ namespace DataBase
             public string First_Name { get; set; }
             public string Last_Name { get; set; }
             public int Birthday { get; set; }
-            public string Mobile_Number { get; set; }
-            public string Email_Address { get; set; }
+            public string Email { get; set; }
+            public string Password { get; set; }
+            public string Mobile { get; set; }           
             public List<Rental> Rental { get; set; }
 
         }

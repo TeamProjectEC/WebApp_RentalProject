@@ -5,28 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="800">
-    <Grid Background="#FFDEF3FF">
-        <Label Content="First_Name" Margin="42,64,688,342" FontWeight="Bold" />
-        <Label Content="Last_Name" Margin="42,130,688,276" FontWeight="Bold"/>
-        <Label Content="Birthday" Margin="42,203,688,203" FontWeight="Bold" />
-        <Label Content="Mobile_Number" Margin="42,274,664,132" FontWeight="Bold"/>
-        <Label Content="Email_Address" Margin="42,337,664,69" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_first_name" TextWrapping="Wrap" Margin="143,62,384,339" TextChanged="tbx_first_name_TextChanged"/>
-        <TextBox x:Name="tbx_last_name" TextWrapping="Wrap" Margin="143,128,384,273" TextChanged="tbx_last_name_TextChanged"/>
-        <TextBox x:Name="tbx_birthday" TextWrapping="Wrap" Margin="143,200,384,200" TextChanged="tbx_birthday_TextChanged"/>
-        <TextBox x:Name="tbx_mobile_number" TextWrapping="Wrap" Margin="143,272,384,129" TextChanged="tbx_mobile_number_TextChanged"/>
-        <TextBox x:Name="tbx_email_address" TextWrapping="Wrap" Margin="143,337,384,64" TextChanged="tbx_email_address_TextChanged"/>
-        <Button Content="Register" Width="150" Height="40" Margin="551,197,100,197" FontWeight="Bold" FontSize="16" BorderBrush="#FF974F4F" Foreground="White" Click="Button_Click" >
+        Title="Register" Height="390" Width="530" Background="Black" WindowStartupLocation="CenterScreen" >
+
+    <Grid Height="350" Width="525">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF2690CD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Foreground="White"/>
+        <Button Content="Login" Height="25" Width="90" Margin="406,5,29,315" FontWeight="Bold" FontSize="14" Foreground="#FFE8E8E8">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF178F2D" Offset="1"/>
-                    <GradientStop Color="#FF168C2C" Offset="0.576"/>
+                    <GradientStop Color="#FFADB420" Offset="0.039"/>
+                    <GradientStop Color="#FF217F36" Offset="0.882"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Grid Margin="31,47,29,0" Height="280" VerticalAlignment="Top" Background="#FFB6B6B6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="252*" />
+            </Grid.RowDefinitions>
 
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockFirstname" Text="First Name:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockLastName" Text="Last Name:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,79,0,0" Name="textBlockBirthday" Text="Birthday:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,107,0,0" Name="textBlockEmailId" Text="Email" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,135,0,0" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,167,0,0" Name="textBlockConfirmPwd" Text="ConfirmPassword:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,195,0,0" Name="textBlockMobile" Text="Mobile" VerticalAlignment="Top" Width="110" />
+            <!--TextBox-->
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxLastName" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,78,0,0" Name="textBoxBirthday" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,107,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="222" />
+            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
+            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="182,167,0,0" Name="passwordBoxConfirm" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="182,0,0,62" Name="textBoxMobile" VerticalAlignment="Bottom" Width="222" />
+            <!--Button-->
+            <Button Content="Submit" Name="Submit" HorizontalAlignment="Left" Margin="183,230,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Foreground="#FF080707" Background="#FF24AC55" FontWeight="Bold"/>
+            <Button Content="Reset" Name="Reset" HorizontalAlignment="Left" Margin="258,230,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Background="#FF24AC55" FontWeight="Bold"/>
+            <Button Content="Cancel" Name="Cancel" HorizontalAlignment="Right" Margin="0,230,62,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Background="#FF24AC55" FontWeight="Bold"/>
+
+
+
+        </Grid>
+        
 
     </Grid>
 </Window>

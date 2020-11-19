@@ -11,6 +11,7 @@
         Background="#252222">
 
     <Grid>
+        
         <Grid>
             <Grid x:Name ="nav_pnl" HorizontalAlignment="Right"  Width="70" Background="#1A1818">
                 <StackPanel x:Name="stk_pnl">
@@ -39,4 +40,5 @@
 
         </Grid>
     </Grid>
+    
 </Window>
