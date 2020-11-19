@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
         Title="Login" Height="470" Width="500">
-    <Grid>
+    <Grid Margin="0,0,0,-6">
         <Rectangle Height="200" VerticalAlignment="Top" Visibility="Visible" RenderTransformOrigin="0.5,0.5" >
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -33,8 +33,8 @@
         </Rectangle>
         <Label Content="Username"  Margin="106,167,106,261" Foreground="White" FontWeight="Bold" FontSize="14" />
         <TextBox x:Name="user_name" TextWrapping="Wrap" Margin="106,193,106,227" TextChanged="user_name_TextChanged"/>
-        <Label Content="Password"  Margin="106,232,106,194" Foreground="White" FontWeight="Bold" FontSize="14" />
+        <Label Content="Password"  Margin="106,238,106,188" Foreground="White" FontWeight="Bold" FontSize="14" />
         <TextBox x:Name="password" TextWrapping="Wrap" Margin="106,265,106,154" TextChanged="password_TextChanged" />
-        <Button Content="Logga in" Margin="150,336,150,85" Click="Button_Click" Background="#FF63C786" FontWeight="Bold" FontSize="16"/>
+        <Button Content="Logga in" Margin="150,346,150,75" Click="Button_Click" Background="#FF63C786" FontWeight="Bold" FontSize="16"/>
     </Grid>
 </Window>

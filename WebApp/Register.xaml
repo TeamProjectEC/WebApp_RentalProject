@@ -1,0 +1,32 @@
+﻿<Window x:Class="WebApp.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebApp"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="800">
+    <Grid Background="#FFDEF3FF">
+        <Label Content="First_Name" Margin="42,64,688,342" FontWeight="Bold" />
+        <Label Content="Last_Name" Margin="42,130,688,276" FontWeight="Bold"/>
+        <Label Content="Birthday" Margin="42,203,688,203" FontWeight="Bold" />
+        <Label Content="Mobile_Number" Margin="42,274,664,132" FontWeight="Bold"/>
+        <Label Content="Email_Address" Margin="42,337,664,69" FontWeight="Bold"/>
+        <TextBox x:Name="tbx_first_name" TextWrapping="Wrap" Margin="143,62,384,339" TextChanged="tbx_first_name_TextChanged"/>
+        <TextBox x:Name="tbx_last_name" TextWrapping="Wrap" Margin="143,128,384,273" TextChanged="tbx_last_name_TextChanged"/>
+        <TextBox x:Name="tbx_birthday" TextWrapping="Wrap" Margin="143,200,384,200" TextChanged="tbx_birthday_TextChanged"/>
+        <TextBox x:Name="tbx_mobile_number" TextWrapping="Wrap" Margin="143,272,384,129" TextChanged="tbx_mobile_number_TextChanged"/>
+        <TextBox x:Name="tbx_email_address" TextWrapping="Wrap" Margin="143,337,384,64" TextChanged="tbx_email_address_TextChanged"/>
+        <Button Content="Register" Width="150" Height="40" Margin="551,197,100,197" FontWeight="Bold" FontSize="16" BorderBrush="#FF974F4F" Foreground="White" Click="Button_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF178F2D" Offset="1"/>
+                    <GradientStop Color="#FF168C2C" Offset="0.576"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Window>

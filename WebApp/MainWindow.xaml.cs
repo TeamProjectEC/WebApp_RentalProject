@@ -40,7 +40,8 @@ namespace WebApp
 
         private void Button_Click_Register(object sender, RoutedEventArgs e)
         {
-
+            var rgs_obj = new Register();
+            rgs_obj.Show();
         }
 
         private void Button_Click_About(object sender, RoutedEventArgs e)
