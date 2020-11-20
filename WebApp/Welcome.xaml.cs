@@ -21,5 +21,27 @@ namespace WebApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Home(object sender, RoutedEventArgs e)
+        {
+            Welcome newWindow = new Welcome();
+            Application.Current.MainWindow = newWindow;
+
+            newWindow.Show();
+
+            this.Close();
+        }
+
+        private void Button_Click_Dashboar(object sender, RoutedEventArgs e)
+        {
+            var dash = new Dashboard();
+            dash.Show();
+            this.Close();
+        }
+
+        private void Button_Click_Log_Out(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

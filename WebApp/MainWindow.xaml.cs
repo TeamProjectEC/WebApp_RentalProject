@@ -29,8 +29,14 @@ namespace WebApp
 
         private void Button_Click_Home(object sender, RoutedEventArgs e)
         {
-
+            MainWindow newWindow = new MainWindow();
+            Application.Current.MainWindow = newWindow;
+            
+            newWindow.Show();
+            
+            this.Close();
         }
+
 
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
@@ -46,7 +52,8 @@ namespace WebApp
 
         private void Button_Click_About(object sender, RoutedEventArgs e)
         {
-
+            var welcome = new Welcome();
+            welcome.Show();
         }
     } 
 }

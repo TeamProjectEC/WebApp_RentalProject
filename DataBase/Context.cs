@@ -9,16 +9,17 @@ namespace DataBase
     class Context : DbContext
     {
         public DbSet<Customer> Customrs { get; set; }
-
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
                 .UseSqlServer(
                  @"server=.\SQLEXPRESS;" +
-                    "database = SimpleSalesDatabase;" +
-                    "trusted_connection=true"
+                   @"database = RentalMoviesDatabase;" +
+                   @"trusted_connection=true" +
+                   @"MultipleActiveResultSets=True"
                 );
         }
 

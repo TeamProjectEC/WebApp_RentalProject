@@ -8,7 +8,8 @@
         Title="MainWindow" 
         Height="450" 
         Width="800"
-        Background="#252222">
+        Background="#252222" 
+        HorizontalAlignment="Center">
 
     <Grid>
         <!--back_ground-->
@@ -27,8 +28,8 @@
                     <GradientStop Color="Black" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Image Source="images/text_logo.png" Height="60" Width="197" HorizontalAlignment="Center" />
-            <Image Source="images/logo.png" Height="60" Width="60" HorizontalAlignment="Left" />
+            <Image Source="images/text_logo.png" Height="60" Width="220" HorizontalAlignment="Center" />
+            <Image Source="images/logo.png" Height="60" Width="80" HorizontalAlignment="Left" />
         </Grid>
         <!--right_pnl_nav-->
         <Grid Name ="nav_pnl" HorizontalAlignment="Right"  Width="70">
@@ -39,10 +40,10 @@
                     <GradientStop Color="#FF3C0505" Offset="0.808"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <StackPanel x:Name="stk_pnl">
+            <StackPanel Name="stk_pnl">
                 <Grid Height="80" >
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                        <Button x:Name="Home" Height="40" Width="68" Content="Home" Foreground="White" Click="Button_Click_Home" >
+                        <Button Name="Home" Height="40" Width="68" Content="Home" Foreground="White" Click="Button_Click_Home" >
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black"/>
@@ -54,7 +55,7 @@
                 </Grid>
                 <Grid Height="80">
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                        <Button x:Name="Login" Height="40" Width="68" Content="Loggin in" Foreground="White" Click="Button_Click_Login">
+                        <Button Name="Login" Height="40" Width="68" Content="Loggin in" Foreground="White" Click="Button_Click_Login">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black"/>
@@ -66,7 +67,7 @@
                 </Grid>
                 <Grid Height="80">
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                        <Button x:Name="Register" Height="40" Width="68" Content="Register" Foreground="White" Click="Button_Click_Register" BorderBrush="Black">
+                        <Button Name="Register" Height="40" Width="68" Content="Register" Foreground="White" Click="Button_Click_Register" BorderBrush="Black">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black"/>
@@ -78,7 +79,7 @@
                 </Grid>
                 <Grid Height="80">
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
-                        <Button x:Name="About" Height="40" Width="68" Content="About" Foreground="White" Click="Button_Click_About">
+                        <Button Name="About" Height="40" Width="68" Content="About" Foreground="White" Click="Button_Click_About">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black"/>
@@ -127,16 +128,16 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
-                        <RowDefinition Height="140" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
                     </Grid.RowDefinitions>
                 </Grid>
 

@@ -10,8 +10,8 @@
     <Grid Height="350" Width="525">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF2690CD" Offset="1"/>
+                <GradientStop Color="Black" Offset="0.831"/>
+                <GradientStop Color="#FF742525" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Foreground="White"/>
@@ -23,7 +23,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Grid Margin="31,47,29,0" Height="280" VerticalAlignment="Top" Background="#FFB6B6B6">
+        <Grid Margin="31,47,29,0" Height="280" VerticalAlignment="Top" Background="#FF646464">
             <Grid.RowDefinitions>
                 <RowDefinition Height="252*" />
             </Grid.RowDefinitions>

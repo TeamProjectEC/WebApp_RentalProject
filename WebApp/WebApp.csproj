@@ -7,7 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\loggin_img.png" />
+    <None Remove="images\logo.png" />
+    <None Remove="images\text_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DataBase\DataBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\loggin_img.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\text_logo.png" />
   </ItemGroup>
 
 </Project>
