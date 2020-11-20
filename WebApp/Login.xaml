@@ -45,7 +45,7 @@
         <TextBox Width="266" Height="30" TextWrapping="Wrap" Margin="108,130,106,204" Name="usernameBox"/>
         <PasswordBox  Width="266"  Height="30" Margin="108,198,106,136" Name="passwordBox"/>
 
-        <Button Content="Logga in" Height="32" Width="145" Margin="168,264,166,70" Click="Button_Click"  OpacityMask="Crimson" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FFC2C5C4">
+        <Button Name="Login" Content="Logga in" Height="32" Width="145" Margin="168,264,166,70" Click="Button_Click"  OpacityMask="Crimson" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FFC2C5C4">
 
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
