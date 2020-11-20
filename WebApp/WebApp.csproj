@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\background_logo.png" />
     <None Remove="images\loggin_img.png" />
     <None Remove="images\logo.png" />
     <None Remove="images\text_logo.png" />
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\background_logo.png" />
     <Resource Include="images\loggin_img.png" />
     <Resource Include="images\logo.png" />
     <Resource Include="images\text_logo.png" />
