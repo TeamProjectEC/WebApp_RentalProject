@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="700" 
-        Width="900"
+        Height="auto" 
+        Width="1700"
         Background="#252222" 
         HorizontalAlignment="Center">
 
     <Grid>
+        <!--left_pnl_nav-->
         <Grid HorizontalAlignment="Left" Width="72">
             <Grid Name ="nav_pnl" HorizontalAlignment="Left"  Width="70">
                 <Grid.Background>
@@ -78,7 +79,6 @@
             <Grid Margin="0,0,0,0">
                 <ScrollViewer Grid.Row="1" BorderBrush="Black">
 
-
                     <ScrollViewer.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF171313" Offset="0.471"/>
@@ -100,10 +100,29 @@
                         </Grid>
                         <!--img_background-->
                         <Image Source="images/background_logo.png"/>
+                        
                         <!--header_menu-->
-                        <Grid Name="header" Height="210" Margin="15,-30,15,0"  Background="#FF2E2B2B">
+                        <Grid Name="header" Height="700" Margin="15,-30,15,0"  Background="#FF2E2B2B">
+
+                            <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF2E2B2B" BorderBrush="#FF2E2B2B">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Rows="3" Columns="3"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <Image Source="films_img\alita.jpg" Width="710" Height="787"/>
+                                <Image Source="films_img\bloodshot.jpg" Width="710" Height="787"/>
+                                <Image Source="films_img\come_play.jpg" Width="710" Height="790"/>
+                                <Image Source="films_img\extraction.jpg" Width="710" Height="787"/>
+                                <Image Source="films_img\greenland.jpg" Width="715" Height="787"/>
+                                <Image Source="films_img\harry_potter.jpg" Width="710" Height="787"/>
+                                <Image Source="films_img\old_guard.jpg" Width="710" Height="787"/>
+                                <Image Source="films_img\de_gaulle.jpg" Width="680" Height="787"/>
+                                <Image Source="films_img\days.jpg" Width="710" Height="787"/>
+                            </ListBox>
                         </Grid>
-                        <Grid Name="body" Margin="15,25,15,0" Background="#FF2E2B2B">
+                        <!--body-->
+                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -113,19 +132,23 @@
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
-                                    <RowDefinition Height="150" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
                                 </Grid.RowDefinitions>
+                                
                             </Grid>
+                           
+
                         </Grid>
+                        <!--botten_nav-->
                         <Grid Height="130" Margin="15,15,15,0" Background="Black">
                             <Image Source="images/logo.png" Height="130" Width="150" HorizontalAlignment="Right" Margin="0,5,0,5"/>
                         </Grid>

@@ -20,8 +20,15 @@ namespace WebApp
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
+        
+       
+
         public MainWindow()
         {
+            
+
             InitializeComponent();
         }
 
@@ -55,5 +62,8 @@ namespace WebApp
             var welcome = new Welcome();
             welcome.Show();
         }
+
+
+       
     } 
 }

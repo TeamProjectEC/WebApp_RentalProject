@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="films_img\alita.jpg" />
+    <None Remove="films_img\bloodshot.jpg" />
+    <None Remove="films_img\come_play.jpg" />
+    <None Remove="films_img\days.jpg" />
+    <None Remove="films_img\de_gaulle.jpg" />
+    <None Remove="films_img\extraction.jpg" />
+    <None Remove="films_img\greenland.jpg" />
+    <None Remove="films_img\harry_potter.jpg" />
+    <None Remove="films_img\old_guard.jpg" />
     <None Remove="images\background_logo.png" />
     <None Remove="images\loggin_img.png" />
     <None Remove="images\logo.png" />
@@ -18,6 +27,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="films_img\alita.jpg" />
+    <Resource Include="films_img\bloodshot.jpg" />
+    <Resource Include="films_img\come_play.jpg" />
+    <Resource Include="films_img\days.jpg" />
+    <Resource Include="films_img\de_gaulle.jpg" />
+    <Resource Include="films_img\extraction.jpg" />
+    <Resource Include="films_img\greenland.jpg" />
+    <Resource Include="films_img\harry_potter.jpg" />
+    <Resource Include="films_img\old_guard.jpg" />
     <Resource Include="images\background_logo.png" />
     <Resource Include="images\loggin_img.png" />
     <Resource Include="images\logo.png" />

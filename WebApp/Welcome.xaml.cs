@@ -41,7 +41,9 @@ namespace WebApp
 
         private void Button_Click_Log_Out(object sender, RoutedEventArgs e)
         {
-
+            var main_w = new MainWindow();
+            main_w.Show();
+            this.Close();
         }
     }
 }
