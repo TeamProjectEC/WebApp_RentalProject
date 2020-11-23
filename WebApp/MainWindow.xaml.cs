@@ -59,8 +59,9 @@ namespace WebApp
 
         private void Button_Click_About(object sender, RoutedEventArgs e)
         {
-            var welcome = new Welcome();
-            welcome.Show();
+            //MessageBox.Show("Welcome to FLIX TV");
+            var dash = new Dashboard();
+            dash.Show();
         }
 
 

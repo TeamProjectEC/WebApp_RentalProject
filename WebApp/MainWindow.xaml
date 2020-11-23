@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="auto" 
-        Width="1700"
+        Height="800" 
+        Width="1000"
         Background="#252222" 
-        HorizontalAlignment="Center">
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <!--left_pnl_nav-->
@@ -100,7 +100,7 @@
                         </Grid>
                         <!--img_background-->
                         <Image Source="images/background_logo.png"/>
-                        
+
                         <!--header_menu-->
                         <Grid Name="header" Height="700" Margin="15,-30,15,0"  Background="#FF2E2B2B">
 
@@ -143,9 +143,9 @@
                                     <RowDefinition Height="350" />
                                     <RowDefinition Height="350" />
                                 </Grid.RowDefinitions>
-                                
+
                             </Grid>
-                           
+
 
                         </Grid>
                         <!--botten_nav-->

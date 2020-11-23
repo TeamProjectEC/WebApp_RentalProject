@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
-        Title="Login" Height="400" Width="500" Background="Black" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="450" Width="550" Background="Black" WindowStartupLocation="CenterScreen">
 
-    <Grid Height="365" Width="472"  Margin="10,10,10,10">
+    <Grid Height="400" Width="510"  Margin="10,10,10,10">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0.718"/>
@@ -24,8 +24,9 @@
             </Rectangle.Fill>
         </Rectangle>
         <!--img-->
-        <Image Source="images\loggin_img.png" Width="90" Height="60" VerticalAlignment="Top" Stretch="Fill" Grid.Column="0" Grid.Row="1" Margin="5"/>
-        <Rectangle Margin="86,71,84,40">
+        <Image Source="images\loggin_img.png" Width="90" Height="60" VerticalAlignment="Top" Stretch="Fill" Grid.Column="0" Margin="211,23,209,0"/>
+
+        <Rectangle Margin="86,86,84,40" >
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.082"/>
@@ -39,22 +40,30 @@
             </Rectangle.Effect>
 
         </Rectangle>
-        <Label Content="Username" Width="100" Height="30" Margin="108,95,272,249"  Foreground="White" FontWeight="Bold" FontSize="14" />
+        <Label Content="Email" Width="100" Height="30" Margin="108,95,272,249"  Foreground="White" FontWeight="Bold" FontSize="14" />
         <Label Content="Password" Width="100" Height="30" Margin="108,165,272,169"  Foreground="White" FontWeight="Bold" FontSize="14" />
 
-        <TextBox Width="266" Height="30" TextWrapping="Wrap" Margin="108,130,106,204" Name="usernameBox"/>
-        <PasswordBox  Width="266"  Height="30" Margin="108,198,106,136" Name="passwordBox"/>
+        <TextBox Width="266" Height="30"  Margin="108,130,106,204" Name="emailBox" />
+        <TextBox  Width="266"  Height="30" Margin="108,198,106,136" Name="passwordBox" />
 
-        <Button Content="Logga in" Height="32" Width="145" Margin="168,264,166,70" Click="Button_Click"  OpacityMask="Crimson" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FFC2C5C4">
-
+        <Button Content="Logga in" Height="30" Width="100" Margin="139,281,271,89" Click="Button_Click" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FF958A87">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF12F96C" Offset="1"/>
-                    <GradientStop Color="#FF11F56A" Offset="0.667"/>
+                    <GradientStop Color="#FF27F949" Offset="0.725"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button Content="Cancel" Height="30" Width="100" Margin="268,281,142,89" Click="Button2_Click" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FFC2C5C4">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF27F949" Offset="0.725"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
     </Grid>
 
 </Window>

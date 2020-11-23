@@ -15,14 +15,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Foreground="White"/>
-        <Button Content="Login" Height="25" Width="90" Margin="406,5,29,315" FontWeight="Bold" FontSize="14" Foreground="#FFE8E8E8">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFADB420" Offset="0.039"/>
-                    <GradientStop Color="#FF217F36" Offset="0.882"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        
         <Grid Margin="31,47,29,0" Height="280" VerticalAlignment="Top" Background="#FF646464">
             <Grid.RowDefinitions>
                 <RowDefinition Height="252*" />
@@ -40,13 +33,13 @@
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxLastName" VerticalAlignment="Top" Width="222" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,78,0,0" Name="textBoxBirthday" VerticalAlignment="Top" Width="222" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,107,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="222" />
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="182,167,0,0" Name="passwordBoxConfirm" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="182,167,0,0" Name="passwordBoxConfirm" VerticalAlignment="Top" Width="222" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="182,0,0,62" Name="textBoxMobile" VerticalAlignment="Bottom" Width="222" />
             <!--Button-->
-            <Button Content="Submit" Name="Submit" HorizontalAlignment="Left" Margin="183,230,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Foreground="#FF080707" Background="#FF24AC55" FontWeight="Bold"/>
-            <Button Content="Reset" Name="Reset" HorizontalAlignment="Left" Margin="258,230,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Background="#FF24AC55" FontWeight="Bold"/>
-            <Button Content="Cancel" Name="Cancel" HorizontalAlignment="Right" Margin="0,230,62,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Background="#FF24AC55" FontWeight="Bold"/>
+            <Button Content="Submit" Name="Submit" HorizontalAlignment="Left" Margin="183,230,0,0" VerticalAlignment="Top" Width="70" Click="Submit_Click" Foreground="#FF080707" Background="#FF24AC55" FontWeight="Bold"/>
+            <Button Content="Reset" Name="Reset" HorizontalAlignment="Left" Margin="258,230,0,0" VerticalAlignment="Top" Width="70" Click="Reset_Click" Background="#FF24AC55" FontWeight="Bold"/>
+            <Button Content="Cancel" Name="Cancel" HorizontalAlignment="Right" Margin="0,230,62,0" VerticalAlignment="Top" Width="70" Click="Cancel_Click" Background="#FF24AC55" FontWeight="Bold"/>
 
 
 

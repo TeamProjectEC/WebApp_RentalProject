@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
         Title="Dashboard" 
-        Height="450" 
-        Width="800" 
-        HorizontalAlignment="Center">
+        Height="800" 
+        Width="1000" 
+        HorizontalAlignment="Center" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0.843"/>
             <GradientStop Color="#FF6C1010" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid Height="450" Width="800">
+    <Grid Height="800" Width="1000">
         <Grid.Background >
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF6C1010" Offset="1"/>
@@ -23,50 +23,90 @@
 
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid Background="#FF6A6C70"  Margin="28,21,159,159">
-            <ScrollBar HorizontalAlignment="Right"/>
+        <Button Name ="Rent" Width="90" Height="30" Margin="870,257,40,513" Content="Rent" Click="Click_Button_Rent" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1D9B34"/>
+                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name ="Add" Width="90" Height="30" Margin="870,114,40,656" Content="Add" Click="Click_Button_Add" FontWeight="Bold" Foreground="Black" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1D9B34"/>
+                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name ="Remove" Width="90" Height="30" Margin="870,646,40,124" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" Foreground="#FF060505" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1D9B34"/>
+                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name ="Close" Width="90" Height="30" Margin="870,400,40,370" Content="Close" Click="Click_Button_Close" FontWeight="Bold" RenderTransformOrigin="0.466,0.99" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1D9B34"/>
+                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Grid Background="#FF6A6C70"  Margin="28,21,159,247">
+            
+            <StackPanel Name="ts1">
+                <ScrollViewer Background="#FF6A6C70">
+                    <ListView Name="listMovie" Height="534" Width="804" Background="#FF6A6C70" SelectionChanged="listMovie_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" Width="Auto">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Content="{Binding sID}" IsChecked="{Binding IsChecked}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Title" Width="Auto" DisplayMemberBinding="{Binding sTitle}"/>
+                                <GridViewColumn Header="Genre" Width="Auto" DisplayMemberBinding="{Binding sIGenre}"/>
+                                <GridViewColumn Header="Director" Width="Auto" DisplayMemberBinding="{Binding sIDirector}"/>
+                                <GridViewColumn Header="Actor" Width="Auto" DisplayMemberBinding="{Binding sIActor}"/>
+                                <GridViewColumn Header="Rating" Width="Auto" DisplayMemberBinding="{Binding sIRating}"/>
+                                
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                   
+                </ScrollViewer>
+
+            </StackPanel>
 
         </Grid>
-        <Grid Background="#FF7E746C" Margin="28,312,159,36"/>
-        <Button Name ="Rent" Width="90" Height="30" Margin="675,133,35,271" Content="Rent" Click="Click_Button_Rent" FontWeight="Bold">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1D9B34"/>
-                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
-                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
-                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Name ="Add" Width="90" Height="30" Margin="675,51,35,353" Content="Add" Click="Click_Button_Add" FontWeight="Bold" Foreground="Black" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1D9B34"/>
-                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
-                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
-                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Name ="Remove" Width="90" Height="30" Margin="675,340,35,64" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" Foreground="#FF060505" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1D9B34"/>
-                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
-                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
-                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Name ="Close" Width="90" Height="30" Margin="675,217,35,187" Content="Close" Click="Click_Button_Close" FontWeight="Bold" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1D9B34"/>
-                    <GradientStop Color="#FF15AE48" Offset="0.525"/>
-                    <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
-                    <GradientStop Color="#FF1CF71C" Offset="0.847"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Grid Background="#FF7E746C" Margin="28,567,159,36" >
+            <DataGrid Name="dg" ItemsSource="{Binding Products}" Background="#FF7E746C" AutoGenerateColumns="False" SelectionChanged="dg_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding IsSelected}" Header=""/>
+                    <DataGridTextColumn Binding="{Binding TheID.ProductName}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding TheFirst_Name.ProductName}" Header="First_Name"/>
+                    <DataGridTextColumn Binding="{Binding TheID.ProductName}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding TheTitle.ProductName}" Header="Title"/>
+                    <DataGridTextColumn Binding="{Binding TheGenre.ProductName}" Header="Genre"/>
+                    <DataGridTextColumn Binding="{Binding TheRating.ProductName}" Header="Rating"/>
+                    <DataGridTextColumn Binding="{Binding TheRent_date.ProductName}" Header="Rent_date"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
     </Grid>
 </Window>

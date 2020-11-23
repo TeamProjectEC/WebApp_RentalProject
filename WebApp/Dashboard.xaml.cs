@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,6 +21,9 @@ namespace WebApp
         public Dashboard()
         {
             InitializeComponent();
+
+            string connection = @"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True";
+            SqlConnection con = new SqlConnection(connection);
         }
 
         private void Click_Button_Add(object sender, RoutedEventArgs e)
@@ -38,6 +42,25 @@ namespace WebApp
         }
 
         private void Click_Button_Remove(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void listMovie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void dg_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

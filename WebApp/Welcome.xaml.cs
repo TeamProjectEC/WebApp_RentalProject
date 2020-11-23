@@ -36,7 +36,7 @@ namespace WebApp
         {
             var dash = new Dashboard();
             dash.Show();
-            this.Close();
+            
         }
 
         private void Button_Click_Log_Out(object sender, RoutedEventArgs e)
