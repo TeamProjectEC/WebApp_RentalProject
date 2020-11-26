@@ -1,6 +1,9 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,14 +25,21 @@ namespace WebApp
         {
             InitializeComponent();
 
-            string connection = @"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True";
-            SqlConnection con = new SqlConnection(connection);
+            string connectionString = @"Server =.\SQLEXPRESS; Database = RentalMoviesDatabase; Integrated Security = True";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand("SELECT * From Rental;", con);
+            /*.Id,CustomerId,First_Name,Last_Name,Movie.Id,MovieId, Movie.Title,Rent_date  From Rental JOIN Customer ON Rental.Id = Customer.Id  JOIN Movie ON Rental.Id = Movie.Id*/
+
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            tbl2.ItemsSource = dt.DefaultView;
+            cmd.Dispose();
+            con.Close();
+
         }
 
-        private void Click_Button_Add(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Click_Button_Rent(object sender, RoutedEventArgs e)
         {
@@ -43,25 +53,60 @@ namespace WebApp
 
         private void Click_Button_Remove(object sender, RoutedEventArgs e)
         {
-
-        }
-
-
-        private void listMovie_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             try
             {
-
+                string connectionString = @"Server =.\SQLEXPRESS; Database = RentalMoviesDatabase; Integrated Security = True";
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand("Delete From Rental Where Id = 5;", con);
+                con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                tbl2.ItemsSource = dt.DefaultView;
+                cmd.Dispose();
+                con.Close();
             }
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show(" Try again!");
+            }
+          
+        }
+       
+
+       
+
+        private void Click_Button_Show(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string connectionString = @"Server =.\SQLEXPRESS; Database = RentalMoviesDatabase; Integrated Security = True";
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand("Select Id,Title,Rating,Genre from Movie", con);
+                con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                tbl.ItemsSource = dt.DefaultView;
+                cmd.Dispose();
+                con.Close();
+            }
+            catch 
+            {
+                MessageBox.Show(" Try again!");
             }
         }
 
-        private void dg_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Fill_DataGrid(object sender, SelectionChangedEventArgs e)
         {
+
+
+        }
+
+        private void Fill_DataGrid2(object sender, SelectionChangedEventArgs e)
+        {
+
 
         }
     }

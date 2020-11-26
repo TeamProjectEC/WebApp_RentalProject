@@ -102,6 +102,7 @@
                         <Image Source="images/background_logo.png"/>
 
                         <!--header_menu-->
+                       
                         <Grid Name="header" Height="700" Margin="15,-30,15,0"  Background="#FF2E2B2B">
 
                             <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF2E2B2B" BorderBrush="#FF2E2B2B">
@@ -121,6 +122,7 @@
                                 <Image Source="films_img\days.jpg" Width="710" Height="787"/>
                             </ListBox>
                         </Grid>
+                        
                         <!--body-->
                         <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
                             <Grid>
