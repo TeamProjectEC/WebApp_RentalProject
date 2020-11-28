@@ -79,17 +79,15 @@
         </Grid>
         <!--Top Display-->
         <Grid Background="#FF6A6C70" Margin="10,75,150,400">
-
-            <DataGrid Name="tbl" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" >
-            </DataGrid>
+            <ScrollViewer Background="#FF6A6C70">
+                <DataGrid Name="tbl" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" SelectedIndex="1" IsEnabled="False" />
+            </ScrollViewer>
+            
 
         </Grid>
         <!--Botton Display-->
         <Grid Background="#FF3D4241" Margin="10,700,150,100" >
-            <DataGrid Name="tbl2" SelectionChanged="Fill_DataGrid2"  Background="#FF3D4241">
-            </DataGrid>
-
+            <DataGrid Name="tbl2" SelectionChanged="Fill_DataGrid2" Background="#FF3D4241" IsEnabled="False"/>
         </Grid>
-
     </Grid>
 </Window>

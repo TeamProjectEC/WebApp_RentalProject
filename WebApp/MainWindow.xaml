@@ -102,54 +102,70 @@
                         <Image Source="images/background_logo.png"/>
 
                         <!--header_menu-->
-                       
+
                         <Grid Name="header" Height="700" Margin="15,-30,15,0"  Background="#FF2E2B2B">
+                            <ScrollViewer Background="#FF2E2B2B">
+                                <Grid Background="#FF2E2B2B">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="500"/>
+                                        <RowDefinition Height="500"/>
+                                        <RowDefinition Height="500"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="films_img\alita.jpg" Grid.Column="0" Height="470"/>
+                                    <Image Source="films_img\bloodshot.jpg" Grid.Column="1"  Height="470"/>
+                                    <Image Source="films_img\come_play.jpg" Grid.Column="2"  Height="470"/>
+                                    <Image Source="films_img\extraction.jpg" Grid.Column="0" Grid.Row="1"  Height="470"/>
+                                    <Image Source="films_img\greenland.jpg" Grid.Column="1" Grid.Row="1"  Height="470"/>
+                                    <Image Source="films_img\harry_potter.jpg" Grid.Column="2" Grid.Row="1"  Height="470"/>
+                                    <Image Source="films_img\old_guard.jpg" Grid.Column="0" Grid.Row="2"  Height="470"/>
+                                    <Image Source="films_img\de_gaulle.jpg" Grid.Column="1" Grid.Row="2"  Height="470"/>
+                                    <Image Source="films_img\days.jpg" Grid.Column="3" Grid.Row="2"  Height="470"/>
 
-                            <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF2E2B2B" BorderBrush="#FF2E2B2B">
-                                <ListBox.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Rows="3" Columns="3"/>
-                                    </ItemsPanelTemplate>
-                                </ListBox.ItemsPanel>
-                                <Image Source="films_img\alita.jpg" Width="710" Height="787"/>
-                                <Image Source="films_img\bloodshot.jpg" Width="710" Height="787"/>
-                                <Image Source="films_img\come_play.jpg" Width="710" Height="790"/>
-                                <Image Source="films_img\extraction.jpg" Width="710" Height="787"/>
-                                <Image Source="films_img\greenland.jpg" Width="715" Height="787"/>
-                                <Image Source="films_img\harry_potter.jpg" Width="710" Height="787"/>
-                                <Image Source="films_img\old_guard.jpg" Width="710" Height="787"/>
-                                <Image Source="films_img\de_gaulle.jpg" Width="680" Height="787"/>
-                                <Image Source="films_img\days.jpg" Width="710" Height="787"/>
-                            </ListBox>
+                                </Grid>
+                               
+
+                            </ScrollViewer>
                         </Grid>
-                        
+
                         <!--body-->
-                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                </Grid.RowDefinitions>
 
-                            </Grid>
+                        <Grid Name="movie_grid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <!--<RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />
+                                <RowDefinition Height="420" />-->
+                            </Grid.RowDefinitions>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" Stretch="None" Grid.Column="0" Grid.Row="0"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BZTk2ZmUwYmEtNTcwZS00YmMyLWFkYjMtNTRmZDA3YWExMjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR10,0,182,268_AL_.jpg" Grid.Column="1" Stretch="None" />
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxM2YyNjMtZjUxYy00OGYyLTg0MmQtNGE2YzNjYmUyZTY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="2" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMTMyMTgyM15BMl5BanBnXkFtZTcwOTc4OTQyMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg" Grid.Column="3" Stretch="None" />
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BOTEyNzg5NjYtNDU4OS00MWYxLWJhMTItYWU4NTkyNDBmM2Y0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="4" Stretch="None" />
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BOTEyNzg5NjYtNDU4OS00MWYxLWJhMTItYWU4NTkyNDBmM2Y0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="5" Stretch="None" />
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BNGMwNzUwNjYtZWM5NS00YzMyLWI4NjAtNjM0ZDBiMzE1YWExXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="0" Grid.Row="1" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3OTQ2NTk2ODNeQTJeQWpwZ15BbWU4MDQ3NTM4MDMx._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="1" Grid.Row="1" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNDYzMDY1OV5BMl5BanBnXkFtZTcwNDA2MzYxMQ@@._V1_UY268_CR2,0,182,268_AL_.jpg"  Grid.Column="2" Grid.Row="1" Stretch="None"/>
 
 
                         </Grid>
+
                         <!--botten_nav-->
                         <Grid Height="130" Margin="15,15,15,0" Background="Black">
                             <Image Source="images/logo.png" Height="130" Width="150" HorizontalAlignment="Right" Margin="0,5,0,5"/>
