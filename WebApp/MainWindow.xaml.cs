@@ -21,20 +21,12 @@ namespace WebApp
     public partial class MainWindow : Window
     {
        
-
-        
-       
-
         public MainWindow()
-        {
-            
+        {       
 
             InitializeComponent();
 
-
-
         }
-
 
 
         private void Button_Click_Home(object sender, RoutedEventArgs e)

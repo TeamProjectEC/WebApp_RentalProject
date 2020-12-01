@@ -29,19 +29,16 @@ namespace DataBase.Migrations
                     b.Property<int>("Birthday")
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("First_Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Last_Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Mobile")
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("User_Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

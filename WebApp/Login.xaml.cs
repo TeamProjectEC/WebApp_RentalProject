@@ -31,7 +31,7 @@ namespace WebApp
         {
 
             SqlConnection connection = new SqlConnection (@"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True");
-            string query = "Select * From Customer Where Email = '" + emailBox.Text.Trim() + "' and Password = '" + passwordBox.Text.Trim() + "'";
+            string query = "Select * From Customer Where User_Name = '" + userBox.Text.Trim() + "' and Password = '" + passwordBox.Text.Trim() + "'";
             SqlDataAdapter sqlData = new SqlDataAdapter(query, connection);
             DataTable customer = new DataTable();
             sqlData.Fill(customer);
@@ -41,12 +41,12 @@ namespace WebApp
                 this.Close();
                 objWelcome.Show();
                 var mw = new MainWindow();
-                mw.Hide();
+                mw.Close();
 
             }
             else
             {
-                MessageBox.Show("Please Check your email and password!");
+                MessageBox.Show("Please Check your username and password!");
             }
         }
 

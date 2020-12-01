@@ -24,10 +24,9 @@ namespace DataBase
                 ctx.RemoveRange(ctx.Rental);
 
                 ctx.AddRange(new List<Customer> {
-                    new Customer { First_Name = "David", Last_Name = "Luiz", Birthday = 1987, Email = "me", Password = "123", Mobile ="015645"},
+                    new Customer { First_Name = "David", Last_Name = "Luiz", Birthday = 1987, User_Name = "user", Password = "user"},
 
                 });
-
                 
 
                 var movies = new List<Movie>();

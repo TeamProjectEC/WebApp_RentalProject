@@ -31,7 +31,8 @@ namespace WebApp
             SqlConnection con = new SqlConnection(connection);
             try
             {
-                string query = "Insert into Customer(First_Name,Last_Name,Birthday,Email,Password,Mobile) Values('" + textBoxFirstName.Text + "','" + textBoxLastName.Text + "','" + textBoxBirthday.Text + "','" + textBoxEmail.Text + "','" + passwordBox1.Text + "','" + textBoxMobile.Text + "')";
+                
+                string query = "Insert into Customer(First_Name,Last_Name,Birthday,User_Name,Password) Values('" + textBoxFirstName.Text + "','" + textBoxLastName.Text + "','" + textBoxBirthday.Text + "','" + textBoxUser.Text + "','" + passwordBox1.Text + "')";
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 con.Open();
                 da.SelectCommand.ExecuteNonQuery();
@@ -59,10 +60,10 @@ namespace WebApp
             textBoxFirstName.Text = "";
             textBoxLastName.Text = "";
             textBoxBirthday.Text = "";
-            textBoxEmail.Text = "";
+            textBoxUser.Text = "";
             passwordBox1.Text = "";
             passwordBoxConfirm.Text = "";
-            textBoxMobile.Text = "";
+          
         }
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
@@ -73,5 +74,7 @@ namespace WebApp
         {
             Close();
         }
+
+       
     }
 }

@@ -125,6 +125,7 @@
                                     <Image Source="films_img\old_guard.jpg" Grid.Column="0" Grid.Row="2"  Height="470"/>
                                     <Image Source="films_img\de_gaulle.jpg" Grid.Column="1" Grid.Row="2"  Height="470"/>
                                     <Image Source="films_img\days.jpg" Grid.Column="3" Grid.Row="2"  Height="470"/>
+                                    
 
                                 </Grid>
                                
@@ -134,7 +135,7 @@
 
                         <!--body-->
 
-                        <Grid Name="movie_grid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
+                        <Grid Name="movie_grid" Background="#FF2E2B2B" Margin="15,25,15,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
@@ -146,24 +147,31 @@
                                 <RowDefinition Height="420" />
                                 <RowDefinition Height="420" />
                                 <RowDefinition Height="420" />
-                                <!--<RowDefinition Height="420" />
                                 <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />-->
                             </Grid.RowDefinitions>
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" Stretch="None" Grid.Column="0" Grid.Row="0"/>
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BZTk2ZmUwYmEtNTcwZS00YmMyLWFkYjMtNTRmZDA3YWExMjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR10,0,182,268_AL_.jpg" Grid.Column="1" Stretch="None" />
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxM2YyNjMtZjUxYy00OGYyLTg0MmQtNGE2YzNjYmUyZTY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="2" Stretch="None"/>
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMTMyMTgyM15BMl5BanBnXkFtZTcwOTc4OTQyMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg" Grid.Column="3" Stretch="None" />
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BOTEyNzg5NjYtNDU4OS00MWYxLWJhMTItYWU4NTkyNDBmM2Y0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="4" Stretch="None" />
-                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BOTEyNzg5NjYtNDU4OS00MWYxLWJhMTItYWU4NTkyNDBmM2Y0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="5" Stretch="None" />
-                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BNGMwNzUwNjYtZWM5NS00YzMyLWI4NjAtNjM0ZDBiMzE1YWExXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="0" Grid.Row="1" Stretch="None"/>
-                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3OTQ2NTk2ODNeQTJeQWpwZ15BbWU4MDQ3NTM4MDMx._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="1" Grid.Row="1" Stretch="None"/>
-                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNDYzMDY1OV5BMl5BanBnXkFtZTcwNDA2MzYxMQ@@._V1_UY268_CR2,0,182,268_AL_.jpg"  Grid.Column="2" Grid.Row="1" Stretch="None"/>
-
-
+                            <!---->
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BNGMwNzUwNjYtZWM5NS00YzMyLWI4NjAtNjM0ZDBiMzE1YWExXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="0" Grid.Row="1" Stretch="None" />
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3OTQ2NTk2ODNeQTJeQWpwZ15BbWU4MDQ3NTM4MDMx._V1_UX182_CR0,0,182,268_AL_.jpg" Grid.Column="1" Grid.Row="1" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BN2NjYWE5NjMtODlmZC00MjJhLWFkZTktYTJlZTI4YjVkMGNmXkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_UY268_CR0,0,182,268_AL_.jpg"  Grid.Column="2" Grid.Row="1" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BYWUwNDk2ZDYtNmFkMi00NjE5LWE1M2ItYTRkNTFjZDU3ZDU4L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTYxNjkxOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="3" Grid.Row="1" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMzk2OTg4MTk1NF5BMl5BanBnXkFtZTcwNjExNTgzNA@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="4" Grid.Row="1" Stretch="None"/>
+                            <!---->
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMGY2OWI5ZjQtYjY0Zi00Y2M4LWEwMmMtOTJhODYxYTExNWZlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY268_CR3,0,182,268_AL_.jpg"  Grid.Column="0" Grid.Row="2" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTM2NDczNjYwMV5BMl5BanBnXkFtZTYwNTI3Mjc4._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="1" Grid.Row="2" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BNDg3MDM5NTI0MF5BMl5BanBnXkFtZTcwNDY0NDk0NA@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="2" Grid.Row="2" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTIxMzA2ODk2NV5BMl5BanBnXkFtZTcwMzQ4ODIyMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg"  Grid.Column="3" Grid.Row="2" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwODYzNDY4Ml5BMl5BanBnXkFtZTcwODkwNTgzNA@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="4" Grid.Row="2" Stretch="None"/>
+                            <!---->
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5NzAwNDAyN15BMl5BanBnXkFtZTYwMjYzMDc5._V1_UY268_CR1,0,182,268_AL_.jpg"  Grid.Column="0" Grid.Row="3" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwMDU1OTEwOF5BMl5BanBnXkFtZTcwMTg5NjEyMQ@@._V1_UY268_CR3,0,182,268_AL_.jpg"  Grid.Column="1" Grid.Row="4" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3ODY1MjA3OF5BMl5BanBnXkFtZTcwODgzOTgyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="2" Grid.Row="4" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3NzA1MjM2N15BMl5BanBnXkFtZTcwMzY3MTMzNA@@._V1_UX182_CR0,0,182,268_AL_.jpg"  Grid.Column="3" Grid.Row="4" Stretch="None"/>
+                            <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BOTIwMzk1MDc1MF5BMl5BanBnXkFtZTcwMTEzNDkyMQ@@._V1_UY268_CR43,0,182,268_AL_.jpg"  Grid.Column="4" Grid.Row="4" Stretch="None"/>
                         </Grid>
 
                         <!--botten_nav-->

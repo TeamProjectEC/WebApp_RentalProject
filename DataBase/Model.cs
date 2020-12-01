@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,16 +12,15 @@ namespace DataBase
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public int Birthday { get; set; }
-        public string Email { get; set; }
+        public string User_Name { get; set; }
         public string Password { get; set; }
-        public string Mobile { get; set; }
         public virtual List<Rental> Rental { get; set; }
 
     }
 
     public class Movie
     {
-
+        
         public int Id { get; set; }
         public string Title { get; set; }
         public string Link { get; set; }
