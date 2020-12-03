@@ -10,6 +10,7 @@
         Width="1000"
         Background="#252222" 
         HorizontalAlignment="Center" WindowStartupLocation="CenterScreen">
+
     <Grid>
         <!--left_pnl_nav-->
         <Grid Name ="nav_pnl" HorizontalAlignment="Left"  Width="70">
@@ -33,6 +34,7 @@
                         </Button>
                     </StackPanel>
                 </Grid>
+
                 <Grid Height="80">
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
                         <Button Name="Dashboard" Height="40" Width="68" Content="Dashboard" Foreground="White" Click="Button_Click_Dashboar">
@@ -81,6 +83,12 @@
                                     <GradientStop Color="Black" Offset="1"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+                            <Grid  Width="125" HorizontalAlignment="Right" Margin="0,50,0,0" >
+
+                                <StackPanel  Grid.Column="0" Grid.RowSpan="1" Margin="0,-22,0,0">
+                                    <TextBox Height="30" Text="Search Movies" Background="DarkGray"></TextBox>
+                                </StackPanel>
+                            </Grid>
                             <Image Source="images/text_logo.png" Height="80" Width="250" HorizontalAlignment="Center" />
                             <Image Source="images/logo.png" Height="100" Width="120" HorizontalAlignment="Left" Margin="0,5,0,5"/>
                         </Grid>
