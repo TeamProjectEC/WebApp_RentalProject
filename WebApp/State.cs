@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApp
 {
-    class State
+    public static class State
     {
-        public static Customer User { get; set; }
+        public static Customer Customer { get; set; }
         public static List<Movie> Movie { get; set; }
         public static Movie Pick { get; set; }
         public static Rental Rental { get; set; }

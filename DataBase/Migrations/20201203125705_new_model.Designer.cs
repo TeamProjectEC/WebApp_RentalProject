@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBase.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20201201142610_new_model")]
+    [Migration("20201203125705_new_model")]
     partial class new_model
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -31,10 +31,10 @@ namespace WebApp
         {
 
 
-            State.User = API.CheckUser(userBox.Text.Trim());
-            if (State.User != null)
+            State.Customer = API.CheckUser(userBox.Text.Trim());
+            if (State.Customer != null)
             {
-                if (State.User.Password == passwordBox.Password)
+                if (State.Customer.Password == passwordBox.Password)
                 {
                     var welcome = new Welcome();
                     welcome.Show();

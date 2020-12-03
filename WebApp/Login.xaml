@@ -43,8 +43,8 @@
         <Label Content="User Name" Width="100" Height="30" Margin="108,95,272,249"  Foreground="White" FontWeight="Bold" FontSize="14" />
         <Label Content="Password" Width="100" Height="30" Margin="108,165,272,169"  Foreground="White" FontWeight="Bold" FontSize="14" />
 
-        <TextBox Width="266" Height="30"  Margin="108,130,106,204" Name="userBox" />
-        <PasswordBox  Width="266"  Height="30" Margin="108,198,106,136" Name="passwordBox" />
+        <TextBox Width="266" Height="30"  Margin="108,130,106,204" Name="userBox" Text="user" />
+        <PasswordBox  Width="266"  Height="30" Margin="108,198,106,136" Name="passwordBox" Password="user" />
 
         <Button Content="Logga in" Height="30" Width="100" Margin="139,281,271,89" Click="Button_Click" FontWeight="Bold" FontSize="16" Visibility="Visible" BorderBrush="#FF958A87">
             <Button.Background>
