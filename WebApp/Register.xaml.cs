@@ -27,32 +27,7 @@ namespace WebApp
  
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            string connection = @"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True";
-            SqlConnection con = new SqlConnection(connection);
-            try
-            {
-                
-                string query = "Insert into Customer(First_Name,Last_Name,Birthday,User_Name,Password) Values('" + textBoxFirstName.Text + "','" + textBoxLastName.Text + "','" + textBoxBirthday.Text + "','" + textBoxUser.Text + "','" + passwordBox1.Text + "')";
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                con.Open();
-                da.SelectCommand.ExecuteNonQuery();
-                MessageBox.Show("Account created successfully..");
-                ClearData();
-                this.Close();
-                var wlc = new Welcome();
-                wlc.Show();
-                var mw = new MainWindow();
-                mw.Hide();
-               
-            }
-            catch
-            {
-                MessageBox.Show("Error occured...");
-            }
-            finally
-            {
-                con.Close();
-            }
+            
         }
 
         private void ClearData()
