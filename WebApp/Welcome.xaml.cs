@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBase;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,6 +21,9 @@ namespace WebApp
         public Welcome()
         {
             InitializeComponent();
+
+            //State.Movie = API.GetMovieSlice(0, 100);
+
         }
 
         private void Button_Click_Home(object sender, RoutedEventArgs e)
@@ -45,5 +49,7 @@ namespace WebApp
             main_w.Show();
             this.Close();
         }
+
+
     }
 }

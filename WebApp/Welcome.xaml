@@ -116,28 +116,27 @@
                             </ScrollViewer>
                         </Grid>
                         <!--body-->
-                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                    <RowDefinition Height="350" />
-                                </Grid.RowDefinitions>
-                            </Grid>
+
+                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                            </Grid.RowDefinitions>
                         </Grid>
                         <!--botten_nav-->
                         <Grid Height="130" Margin="15,15,15,0" Background="Black">

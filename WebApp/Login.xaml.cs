@@ -31,10 +31,10 @@ namespace WebApp
         {
 
 
-            State.Customer = API.CheckUser(userBox.Text.Trim());
-            if (State.Customer != null)
+            State.User = API.CheckUser(userBox.Text.Trim());
+            if (State.User != null)
             {
-                if (State.Customer.Password == passwordBox.Password)
+                if (State.User.Password == passwordBox.Password)
                 {
                     var welcome = new Welcome();
                     welcome.Show();
@@ -55,6 +55,8 @@ namespace WebApp
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
+            var mainw = new MainWindow();
+            mainw.Show();
             Close();
         }
     }
