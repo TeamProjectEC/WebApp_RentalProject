@@ -117,7 +117,7 @@
                         </Grid>
                         <!--body-->
 
-                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
+                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
@@ -125,17 +125,8 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <!---->
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
-                                <RowDefinition Height="350" />
                             </Grid.RowDefinitions>
                         </Grid>
                         <!--botten_nav-->
