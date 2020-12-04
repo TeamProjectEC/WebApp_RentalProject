@@ -47,6 +47,7 @@
                         </Button>
                     </StackPanel>
                 </Grid>
+               
                 <Grid Height="80">
                     <StackPanel Orientation="Horizontal" Grid.Column="0" >
                         <Button Name ="Log_Out" Height="40" Width="68" Content="Log Out" Foreground="White" Click="Button_Click_Log_Out" BorderBrush="Black">
@@ -83,6 +84,25 @@
                                     <GradientStop Color="Black" Offset="1"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <Grid  Width="125" HorizontalAlignment="Right" Margin="0,50,0,0" >
+
+                                <StackPanel  Grid.Column="0" Grid.RowSpan="1" Margin="0,-22,0,0">
+                                    <TextBox Height="30" Text="Search Movies" Name="textboxMovieSearch" Background="DarkGray"></TextBox>
+                                    
+
+                                </StackPanel>
+                            </Grid>
+                            <Grid  Width="125" HorizontalAlignment="Right" Margin="0,55,0,0" >
+
+
+
+
+                                <Button Name="SearchMovie"   Click="Submit_Click" ></Button>
+
+                            </Grid>
+                           
+
                             <Image Source="images/text_logo.png" Height="80" Width="250" HorizontalAlignment="Center" />
                             <Image Source="images/logo.png" Height="100" Width="120" HorizontalAlignment="Left" Margin="0,5,0,5"/>
                         </Grid>
@@ -116,18 +136,28 @@
                             </ScrollViewer>
                         </Grid>
                         <!--body-->
-
-                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <!---->
-                            <Grid.RowDefinitions>
-                            </Grid.RowDefinitions>
+                        <Grid Name="movieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                    <RowDefinition Height="350" />
+                                </Grid.RowDefinitions>
+                            </Grid>
                         </Grid>
                         <!--botten_nav-->
                         <Grid Height="130" Margin="15,15,15,0" Background="Black">

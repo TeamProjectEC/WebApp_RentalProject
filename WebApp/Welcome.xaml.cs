@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -9,7 +10,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using DataBase;
 
 namespace WebApp
 {
@@ -130,7 +130,5 @@ namespace WebApp
             main_w.Show();
             this.Close();
         }
-
-
     }
 }
