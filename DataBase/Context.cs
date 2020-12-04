@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataBase
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Movie> Movie { get; set; }
@@ -18,7 +18,7 @@ namespace DataBase
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
                 @"server=.\SQLEXPRESS;" +
-                @"database=RentalMoviesDatabase;" +
+                @"database=SaleDatabase;" + 
                 @"trusted_connection=true;" +
                 @"MultipleActiveResultSets=True"
                 );

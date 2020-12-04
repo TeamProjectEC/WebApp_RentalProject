@@ -15,7 +15,8 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Foreground="White"/>
-
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="212,5,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="300"  OpacityMask="Crimson" Foreground="Red" FontWeight="Normal" FontSize="14" />
+        
         <Grid Margin="31,47,29,0" Height="360" VerticalAlignment="Top" Background="#FF646464">
             <Grid.RowDefinitions>
                 <RowDefinition Height="252*" />
@@ -38,7 +39,6 @@
             <Button Content="Submit" Name="Submit" HorizontalAlignment="Left" Margin="183,240,0,0" VerticalAlignment="Top" Width="70" Click="Submit_Click" Foreground="#FF080707" Background="#FF24AC55" FontWeight="Bold"/>
             <Button Content="Reset" Name="Reset" HorizontalAlignment="Left" Margin="258,240,0,0" VerticalAlignment="Top" Width="70" Click="Reset_Click" Background="#FF24AC55" FontWeight="Bold"/>
             <Button Content="Cancel" Name="Cancel" HorizontalAlignment="Left" Margin="335,240,0,0" VerticalAlignment="Top" Width="70" Click="Cancel_Click" Background="#FF24AC55" FontWeight="Bold"/>
-
 
 
         </Grid>
