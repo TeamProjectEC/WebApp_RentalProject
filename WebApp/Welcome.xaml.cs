@@ -53,7 +53,7 @@ namespace WebApp
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
            
-            string connection = @"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True";
+            string connection = @"Server=.\SQLEXPRESS; Database= SaleDatabase; Integrated Security=True";
             SqlConnection con = new SqlConnection(connection);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Movie WHERE Id  =  " + textboxMovieSearch.Text, con);
