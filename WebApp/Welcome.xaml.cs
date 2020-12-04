@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -9,6 +10,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Linq;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using System.Data;
 
 namespace WebApp
 {
@@ -45,5 +49,31 @@ namespace WebApp
             main_w.Show();
             this.Close();
         }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+           
+            string connection = @"Server=.\SQLEXPRESS; Database=RentalMoviesDatabase; Integrated Security=True";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Movie WHERE Id  =  " + textboxMovieSearch.Text, con);
+          
+            System.Data.DataTable dt = new System.Data.DataTable();
+  
+          
+           
+            sda.Fill(dt);
+            datagrid1.ItemsSource = dt.DefaultView;
+            sda.Update(dt);
+
+
+            MessageBox.Show("Succeded");
+          
+           
+ 
+
+           
+            }
+        }
     }
-}
+
