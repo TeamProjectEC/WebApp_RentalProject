@@ -31,7 +31,7 @@ namespace DataBase
 
                 var movies = new List<Movie>();
                 var lines = File.ReadAllLines(@"..\..\..\DBData\MovieGenre.csv");
-                for (int i = 1; i < 100; i++)
+                for (int i = 1; i < 1000; i++)
                 {
                    
                     var cells = lines[i].Split(',');

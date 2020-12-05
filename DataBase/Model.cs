@@ -16,6 +16,10 @@ namespace DataBase
         public string Password { get; set; }
         public virtual List<Rental> Rental { get; set; }
 
+        public static implicit operator Customer(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class Movie
