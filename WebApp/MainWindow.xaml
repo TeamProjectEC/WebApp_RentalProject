@@ -144,10 +144,10 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
-                                <RowDefinition Height="420" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
+                                <RowDefinition Height="350" />
                             </Grid.RowDefinitions>
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" Stretch="None" Grid.Column="0" Grid.Row="0"/>
                             <Image Source="https://images-na.ssl-images-amazon.com/images/M/MV5BZTk2ZmUwYmEtNTcwZS00YmMyLWFkYjMtNTRmZDA3YWExMjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR10,0,182,268_AL_.jpg" Grid.Column="1" Stretch="None" />

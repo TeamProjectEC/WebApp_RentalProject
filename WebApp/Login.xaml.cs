@@ -20,19 +20,20 @@ namespace WebApp
     /// </summary>
     public partial class Login : Window
     {
-        
+
         public Login()
         {
             InitializeComponent();
         }
 
-       
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
 
+
             State.Customer = API.CheckUser(userBox.Text.Trim());
-            if (State.Customer != null )
+            if (State.Customer != null)
             {
                 if (State.Customer.Password == "Admin1984" && userBox.Text == "Admin")
                 {
@@ -41,27 +42,36 @@ namespace WebApp
                     this.Close();
 
                 }
-               else if (State.Customer.Password == passwordBox.Password)
+                else if (State.Customer.Password == passwordBox.Password)
+
+                    State.User = API.CheckUser(userBox.Text.Trim());
+                if (State.User != null)
                 {
-                    var welcome = new Welcome();
-                    welcome.Show();
-                    this.Close();
+                    if (State.User.Password == passwordBox.Password)
+
+                    {
+                        var welcome = new Welcome();
+                        welcome.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Please Check your password.");
+                    }
                 }
                 else
                 {
-
-                    MessageBox.Show("Please Check your password.");
+                    MessageBox.Show("Please Check your username");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please Check your username");
-            }
 
+            }
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
+            var mainw = new MainWindow();
+            mainw.Show();
             Close();
         }
     }

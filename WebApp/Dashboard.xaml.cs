@@ -49,7 +49,7 @@ namespace WebApp
 
         private void Click_Button_Close(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
 
 

@@ -44,6 +44,7 @@ namespace WebApp
         {
             var login_obj = new Login();
             login_obj.Show();
+            this.Close();
         }
 
         private void Button_Click_Register(object sender, RoutedEventArgs e)

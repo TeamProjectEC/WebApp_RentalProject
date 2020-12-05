@@ -38,7 +38,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Name ="Remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,124,23,0">
+            <Button Name ="remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,124,23,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1D9B34"/>
@@ -49,7 +49,7 @@
                 </Button.Background>
             </Button>
 
-            <Button Name ="Close" Width="120" Height="30" Content="Close"  Click="Click_Button_Close" FontWeight="Bold" VerticalAlignment="Top" Margin="22,597,23,0" >
+            <Button Name ="close" Width="120" Height="30" Content="Close"  Click="Click_Button_Close" FontWeight="Bold" VerticalAlignment="Top" Margin="22,597,23,0" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1D9B34"/>

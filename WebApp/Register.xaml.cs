@@ -62,8 +62,8 @@ namespace WebApp
                     else
                     {  
                         
-                        State.Customer = API.CheckUser(textBoxUser.Text);
-                        if (State.Customer != null)
+                        State.User = API.CheckUser(textBoxUser.Text);
+                        if (State.User != null)
                         {
                                 errormessage.Text = "Username already taken.";
                         }
@@ -71,9 +71,7 @@ namespace WebApp
                         else
                         {
 
-                            var user = (new List<Customer> { new Customer { First_Name = textBoxFirstName.Text, Last_Name = textBoxLastName.Text, Birthday = Convert.ToInt32(textBoxBirthday.Text), User_Name = textBoxUser.Text, Password = passwordBox1.Text } });
-
-                            ctx.AddRange(user);
+                            ctx.Customer.Add(new Customer { First_Name = textBoxFirstName.Text, Last_Name = textBoxLastName.Text, Birthday = Convert.ToInt32(textBoxBirthday.Text), User_Name = textBoxUser.Text, Password = passwordBox1.Text });                       
                             ctx.SaveChanges();
                             MessageBox.Show("You have Registered successfully.");
                             var welecome = new Welcome();
@@ -86,7 +84,7 @@ namespace WebApp
 
                 }
 
-                catch (System.Exception)
+                catch (Exception)
                 {
 
                     throw;
