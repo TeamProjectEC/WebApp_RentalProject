@@ -35,7 +35,7 @@ namespace WebApp
             State.Customer = API.CheckUser(userBox.Text.Trim());
             if (State.Customer != null)
             {
-                if (State.Customer.Password == "Admin1984" && userBox.Text == "Admin")
+                if (passwordBox.Password == "Admin0000" && userBox.Text == "Admin")
                 {
                     var admin = new AdminPage();
                     admin.Show();

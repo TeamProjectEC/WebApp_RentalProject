@@ -25,6 +25,8 @@ namespace DataBase
 
                 ctx.AddRange(new List<Customer> {
                     new Customer { First_Name = "David", Last_Name = "Luiz", Birthday = 1987, User_Name = "user", Password = "user"},
+                      new Customer { First_Name = "Admin", Last_Name = "Admin", Birthday = 0000, User_Name = "Admin", Password = "Admin0000"},
+
 
                 });
                 
