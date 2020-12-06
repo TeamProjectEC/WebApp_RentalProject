@@ -39,7 +39,6 @@ namespace WebApp
             this.Close();
         }
 
-
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
             var login_obj = new Login();
