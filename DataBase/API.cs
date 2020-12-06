@@ -36,11 +36,7 @@ namespace DataBase
 
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
         {
-            return ctx.Movie
-                .OrderBy(m => m.Title)
-                .Skip(skip_x)
-                .Take(take_x)
-                .ToList();
+            return ctx.Movie.OrderBy(m => m.Title).Skip(skip_x).Take(take_x).ToList();
         }
 
         public static bool RegisterSale(Customer customer, Movie movie)

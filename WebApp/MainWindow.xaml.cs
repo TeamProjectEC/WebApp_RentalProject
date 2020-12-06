@@ -58,13 +58,7 @@ namespace WebApp
             var dash = new Dashboard();
             dash.Show();
         }
-        private void Button_Click_Admin(object sender, RoutedEventArgs e)
-        {
-           //Admin Page to controll data
-            var Admin = new AdminPage();
-            Admin.Show();
-        }
-
+       
 
 
 

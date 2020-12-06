@@ -26,9 +26,11 @@
         </Grid.Background>
 
         <Grid VerticalAlignment="Top" Margin="10,11,175,0"  Height="70"/>
+        
         <!--Right Buttons-->
         <Grid HorizontalAlignment="Right" Width="170" Margin="0,10,0,0">
-            <Button Name ="changePass" Width="120" Height="30" Content="Change Password"  Click="Click_Button_Change" VerticalAlignment="Top" FontWeight="Bold" Margin="22,357,23,0" RenderTransformOrigin="0.454,-1.117" >
+
+            <Button Name ="show"  Width="120" Height="30" Content="Show My Rent" Click="Click_Button_Show" FontWeight="Bold" VerticalAlignment="Top" Margin="22,85,23,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1D9B34"/>
@@ -38,7 +40,8 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Name ="remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,124,23,0">
+
+            <Button Name ="remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,160,23,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1D9B34"/>
@@ -48,6 +51,31 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+
+            <Button Name ="changePass" Width="120" Height="30" Content="Change Password"  Click="Click_Button_Change" VerticalAlignment="Top" FontWeight="Bold" Margin="22,457,23,0">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1D9B34"/>
+                        <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                        <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                        <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+
+            <Button Name ="showMovies" Width="120" Height="30" Content="Show Moveis List"  Click="Click_Button_Moveis_List" VerticalAlignment="Top" FontWeight="Bold" Margin="22,300,23,0">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1D9B34"/>
+                        <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                        <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                        <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
 
             <Button Name ="close" Width="120" Height="30" Content="Close"  Click="Click_Button_Close" FontWeight="Bold" VerticalAlignment="Top" Margin="22,597,23,0" >
                 <Button.Background>
@@ -63,14 +91,21 @@
 
         </Grid>
         <!--Top-->
-
-        <!--Botton Display-->
         <Grid Background="#FF6A6C70" VerticalAlignment="Top"  Margin="30,86,175,420">
+
+            <DataGrid Name="dataView" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" Height="140"/>
+
+        </Grid>
+        <!--Botton Display-->
+        <Grid Background="#FF6A6C70"  Margin="30,270,175,100">
             <ScrollViewer Background="#FF6A6C70" Margin="0,0,0,0">
-                <DataGrid Name="tbl" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" Height="140" />
+                <DataGrid Name="dataView2" SelectionChanged="Fill_DataGrid2" Background="#FF6A6C70" />
+
+
             </ScrollViewer>
 
         </Grid>
+        
 
 
     </Grid>

@@ -30,44 +30,27 @@ namespace WebApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-
-
-            State.Customer = API.CheckUser(userBox.Text.Trim());
-            if (State.Customer != null)
+            State.User = API.CheckUser(userBox.Text.Trim());
+            if (State.User != null)
             {
-                if (passwordBox.Password == "Admin0000" && userBox.Text == "Admin")
+                if (State.User.Password == passwordBox.Password)
                 {
-                    var admin = new AdminPage();
-                    admin.Show();
+                    var welcome = new Welcome();
+                    welcome.Show();
                     this.Close();
-
-                }
-                else if (State.Customer.Password == passwordBox.Password)
-
-                    State.User = API.CheckUser(userBox.Text.Trim());
-                if (State.User != null)
-                {
-                    if (State.User.Password == passwordBox.Password)
-
-                    {
-                        var welcome = new Welcome();
-                        welcome.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("Please Check your password.");
-                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please Check your username");
+                    MessageBox.Show("Please Check your password.");
                 }
-
             }
-        }
+            else
+            {
+                MessageBox.Show("Please Check your username.");
+            }
 
+        }
+        
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
             var mainw = new MainWindow();
