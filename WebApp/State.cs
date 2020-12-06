@@ -12,6 +12,6 @@ namespace WebApp
         public static List<Movie> Movie { get; set; }
         public static Movie Pick { get; set; }
         public static Rental Rental { get; set; }
-        public static Customer Customer { get; internal set; }
+        
     }
 }

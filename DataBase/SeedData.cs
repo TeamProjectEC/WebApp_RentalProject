@@ -25,7 +25,6 @@ namespace DataBase
 
                 ctx.AddRange(new List<Customer> {
                     new Customer { First_Name = "David", Last_Name = "Luiz", Birthday = 1987, User_Name = "user", Password = "user"},
-                      new Customer { First_Name = "Admin", Last_Name = "Admin", Birthday = 0000, User_Name = "Admin", Password = "Admin0000"},
 
 
                 });
@@ -33,7 +32,7 @@ namespace DataBase
 
                 var movies = new List<Movie>();
                 var lines = File.ReadAllLines(@"..\..\..\DBData\MovieGenre.csv");
-                for (int i = 1; i < 1000; i++)
+                for (int i = 1; i < 100; i++)
                 {
                    
                     var cells = lines[i].Split(',');
