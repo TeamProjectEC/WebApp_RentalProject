@@ -40,8 +40,9 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <TextBox Name="removeById" Width="120" Height="25" Text="Rent ID here" VerticalAlignment="Top" Margin="22,140,23,0" FontWeight="Normal" Background="#FF020403" Foreground="#FFFDF3F3" BorderBrush="#FF47D44E"/>
 
-            <Button Name ="remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,160,23,0">
+            <Button Name ="remove"  Width="120" Height="30" Content="Remove" Click="Click_Button_Remove" FontWeight="Bold" VerticalAlignment="Top" Margin="22,170,23,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1D9B34"/>
@@ -63,8 +64,6 @@
                 </Button.Background>
             </Button>
 
-
-
             <Button Name ="showMovies" Width="120" Height="30" Content="Show Moveis List"  Click="Click_Button_Moveis_List" VerticalAlignment="Top" FontWeight="Bold" Margin="22,300,23,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -75,8 +74,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
-
+            
             <Button Name ="close" Width="120" Height="30" Content="Close"  Click="Click_Button_Close" FontWeight="Bold" VerticalAlignment="Top" Margin="22,597,23,0" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -87,21 +85,17 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
-
         </Grid>
         <!--Top-->
         <Grid Background="#FF6A6C70" VerticalAlignment="Top"  Margin="30,86,175,420">
-
-            <DataGrid Name="dataView" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" Height="140"/>
-
+            
+                <DataGrid Name="dataView" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" Height="140"/>
+            
         </Grid>
         <!--Botton Display-->
         <Grid Background="#FF6A6C70"  Margin="30,270,175,100">
             <ScrollViewer Background="#FF6A6C70" Margin="0,0,0,0">
-                <DataGrid Name="dataView2" SelectionChanged="Fill_DataGrid2" Background="#FF6A6C70" />
-
-
+                <DataGrid Name="dataView2" SelectionChanged="Fill_DataGrid2" Background="#FF6A6C70"/>
             </ScrollViewer>
 
         </Grid>

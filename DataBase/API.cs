@@ -23,21 +23,25 @@ namespace DataBase
             return ctx.Customer.FirstOrDefault(c => c.User_Name.ToLower() == user.ToLower());
         }
 
+
         public static Customer CheckPassword(string password)
         {
             
             return ctx.Customer.FirstOrDefault(c => c.Password.ToLower() == password.ToLower());
         }
 
+
         public static List<Movie> MovieSliceByTitleAZ(int x, int y)
         {
             return ctx.Movie.OrderByDescending(z => z.Title).Skip(x).Take(y).ToList();
         }
 
+
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
         {
             return ctx.Movie.OrderBy(m => m.Title).Skip(skip_x).Take(take_x).ToList();
         }
+
 
         public static bool RegisterSale(Customer customer, Movie movie)
         {
@@ -56,6 +60,8 @@ namespace DataBase
                 return false;
             }
         }
+
+        
     }
 
 }

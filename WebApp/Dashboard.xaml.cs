@@ -14,13 +14,13 @@ namespace WebApp
     /// </summary>
     public partial class Dashboard : Window
     {
-        
-        
+
+
         public Dashboard()
         {
             InitializeComponent();
 
-            
+
         }
 
         private void Click_Button_Show(object sender, RoutedEventArgs e)
@@ -29,32 +29,55 @@ namespace WebApp
 
 
             var query = from a in ctx.Rental
-                    join b in ctx.Customer on a.Id equals b.Id
-                    join c in ctx.Movie on a.Id equals c.Id
-                    select new
-                    {
-                        ID = a.Id,
-                        FirstName = b.First_Name,
-                        CustomerId = b.Id,
-                        Title = c.Title,
-                        MovieId = c.Id,
-                        RentDate = a.Rent_date,
-
-                    };
+                            //join b in ctx.Customer on a.Id equals b.Id
+                            ////join c in ctx.Movie on a.Id equals c.Id
+                        select new
+                        {
+                            ID = a.Id,
+                            //FirstName = b.First_Name,
+                            //CustomerId = b.Id,
+                            //Title = c.Title,
+                            //MovieId = c.Id,
+                            RentDate = a.Rent_date,
+                        };
 
             dataView.ItemsSource = query.ToList();
+
 
         }
 
         private void Click_Button_Remove(object sender, RoutedEventArgs e)
         {
            
+            try
+            {
+                Context ctx = new Context();
+                var a = Convert.ToInt32(removeById.Text);
+
+                if (ctx.Rental.All(x => x.Id != a))
+                {
+                    MessageBox.Show("This id movie is not in list.");
+                }
+                else
+                {
+                    Rental remove = ctx.Rental.Single(x => x.Id == Convert.ToInt32(removeById.Text));
+                    ctx.Rental.Remove(remove);
+                    ctx.SaveChanges();
+                    MessageBox.Show("Movie by select id removed from list.");
+                }
+            }
+            catch (Exception ex)
+            {
+                 MessageBox.Show(ex.Message);              
+            }
+    
 
         }
+
+
         private void Click_Button_Moveis_List(object sender, RoutedEventArgs e)
         {
             Context ctx = new Context();
-
 
             var query = from a in ctx.Movie
 
@@ -63,7 +86,7 @@ namespace WebApp
                             ID = a.Id,
                             Title = a.Title,
                             Rating = a.Rating,
-                            Genre = a.Genre,                  
+                            Genre = a.Genre,
 
                         };
 
@@ -83,7 +106,7 @@ namespace WebApp
             this.Close();
         }
 
-          
+
         private void Fill_DataGrid(object sender, SelectionChangedEventArgs e)
         {
 
@@ -94,6 +117,7 @@ namespace WebApp
 
         }
 
-       
+
+
     }
 }
