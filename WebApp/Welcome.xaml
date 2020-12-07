@@ -136,7 +136,7 @@
                             </ComboBox>
                         </Grid>
                         <!--body-->
-                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
+                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />

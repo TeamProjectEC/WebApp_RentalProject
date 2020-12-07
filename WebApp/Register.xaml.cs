@@ -51,11 +51,15 @@ namespace WebApp
                     {
                         errormessage.Text = "Username can not be blank.";
                     }
-                    else if (passwordBox1.Text.Length == 0 && passwordBoxConfirm.Text.Length == 0)
+                    else if (passwordBox1.Text.Length == 0 )
                     {
                         errormessage.Text = "Password can not be blank.";
                     }
-                    else if (passwordBoxConfirm.Text.Length == 1 && passwordBox1.Text.Length != passwordBoxConfirm.Text.Length)
+                    else if (passwordBoxConfirm.Text.Length == 0)
+                    {
+                        errormessage.Text = "Confirm password can not be blank.";
+                    }
+                    else if (passwordBox1.Text.Length != passwordBoxConfirm.Text.Length)
                     {
                         errormessage.Text = "Confirm password must be same as password.";
                     }
@@ -84,10 +88,10 @@ namespace WebApp
 
                 }
 
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    throw;
+                    MessageBox.Show(ex.Message);
                 }
             }
 
@@ -110,7 +114,10 @@ namespace WebApp
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            var mainw = new MainWindow();
+            mainw.Show();
+            this.Close();
+
         }
 
 

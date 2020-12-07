@@ -50,17 +50,14 @@ namespace WebApp
         {
             var rgs_obj = new Register();
             rgs_obj.Show();
+            this.Close();
         }
 
         private void Button_Click_About(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("Welcome to FLIX TV");
-            var dash = new Dashboard();
-            dash.Show();
+            MessageBox.Show("Welcome to FLIX TV");
         }
-       
-
-
+      
 
     } 
 }
