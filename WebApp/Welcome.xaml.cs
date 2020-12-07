@@ -25,7 +25,7 @@ namespace WebApp
 
 
             int movie_skip_count = 0;
-            int movie_take_count = 100;
+            int movie_take_count = 200;
             State.Movie = API.GetMovieSlice(movie_skip_count, movie_take_count);
             State.Movie1 = API.MovieSliceByTitleAZ(movie_skip_count, movie_take_count);
 
@@ -34,8 +34,7 @@ namespace WebApp
 
             int row_count = (int)Math.Ceiling((double)State.Movie.Count / (double)column_count);
 
-            if (ComboBoxItem.Name != "C1")
-
+            if (comboBoxItem.Tag != null)
             {
                 for (int y = 0; y < row_count; y++)
                 {
@@ -64,6 +63,7 @@ namespace WebApp
                                 VerticalAlignment = VerticalAlignment.Center,
                             };
                             LinearGradientBrush myBrush = new LinearGradientBrush();
+                            
                             myBrush.GradientStops.Add(new GradientStop(Colors.Yellow, 0.0));
                             myBrush.GradientStops.Add(new GradientStop(Colors.Orange, 0.5));
                             myBrush.GradientStops.Add(new GradientStop(Colors.Red, 1.0));
@@ -76,7 +76,7 @@ namespace WebApp
                                 Cursor = Cursors.Hand,
                                 HorizontalAlignment = HorizontalAlignment.Center,
                                 VerticalAlignment = VerticalAlignment.Center,
-                                Margin = new Thickness(10, 10, 10, 10),
+                                Margin = new Thickness(10, 20, 10, 40),
                             };
                             image.MouseUp += Image_MouseUp;
 
@@ -135,18 +135,33 @@ namespace WebApp
                         {
 
                             var movie1 = State.Movie1[i];
-                            var showTitle = new TextBox();
+                            var showTitle = new TextBox()
+                            {
+                                FontWeight = FontWeights.Bold,
+                                Background = Brushes.Black,
+                                Foreground = Brushes.White,
+                                Margin = new Thickness( 0, 0, 0, 27 ),
+                                HorizontalAlignment = HorizontalAlignment.Center,
+                                VerticalAlignment = VerticalAlignment.Bottom,
+                            };
+                            
+                            
+
                             var showRating = new TextBox()
                             {
                                 Cursor = Cursors.Arrow,
-                                HorizontalAlignment = HorizontalAlignment.Left,
-                                VerticalAlignment = VerticalAlignment.Center,
+                                HorizontalAlignment = HorizontalAlignment.Center,
+                                VerticalAlignment = VerticalAlignment.Bottom,
+                                Margin = new Thickness(0, 0, 0, 5)
+
                             };
-                            LinearGradientBrush myBrush = new LinearGradientBrush();
-                            myBrush.GradientStops.Add(new GradientStop(Colors.Yellow, 0.0));
-                            myBrush.GradientStops.Add(new GradientStop(Colors.Orange, 0.5));
-                            myBrush.GradientStops.Add(new GradientStop(Colors.Red, 1.0));
-                            showRating.Background = myBrush;
+                            LinearGradientBrush myBrush2 = new LinearGradientBrush();
+                            myBrush2.GradientStops.Add(new GradientStop(Colors.Yellow, 0.0));
+                            myBrush2.GradientStops.Add(new GradientStop(Colors.Orange, 0.5));
+                            myBrush2.GradientStops.Add(new GradientStop(Colors.Red, 1.0));
+                            
+                            showRating.Background = myBrush2;
+                            
 
 
 
@@ -155,7 +170,7 @@ namespace WebApp
                                 Cursor = Cursors.Hand,
                                 HorizontalAlignment = HorizontalAlignment.Center,
                                 VerticalAlignment = VerticalAlignment.Center,
-                                Margin = new Thickness(10, 10, 10, 10),
+                                Margin = new Thickness(10, 10, 10, 50),
                             };
                             image.MouseUp += Image_MouseUp;
 
@@ -245,7 +260,7 @@ namespace WebApp
                 main_w.Show();
                 this.Close();
             }
-            private void Button_SearchBox(object sender, RoutedEventArgs e)
+            private void Button_SearchWindow(object sender, RoutedEventArgs e)
             {
                 var searchWindow = new SearchWindow();
                 searchWindow.Show();

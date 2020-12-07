@@ -128,7 +128,7 @@
                                     <GradientStop Color="#FF4F1515" Offset="1"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
-                            <Button Name ="Search" Content="Show All Movies" Foreground="White" Click="Button_SearchBox"  Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Margin="0,0,200,0"  BorderBrush="Black">
+                            <Button Name ="Search" Content="Show All Movies" Foreground="White" Click="Button_SearchWindow" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Margin="0,0,200,0"  BorderBrush="Black">
                             
                                     <Button.Background>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -138,13 +138,13 @@
                                 </Button.Background>
                             </Button>
                             <ComboBox Name="Combobox" VerticalAlignment="Center" HorizontalAlignment="Left" Width="180" Height="25" Margin="25,0,0,0" Background="{x:Null}" BorderBrush="#FF131212" Foreground="Black">
-                                <ComboBoxItem Name="ComboBoxItem">Sort by name a-z</ComboBoxItem>
-                                <ComboBoxItem Name="C2">Sort by highest rating</ComboBoxItem>
-                                <ComboBoxItem Name="C3">Sort by lowest rating</ComboBoxItem>
+                                <ComboBoxItem Name="comboBoxItem">Sort by name A-Z</ComboBoxItem>
+                                <ComboBoxItem Name="c2">Sort by highest rating</ComboBoxItem>
+                                <ComboBoxItem Name="c3">Sort by lowest rating</ComboBoxItem>
                             </ComboBox>
                         </Grid>
                         <!--body-->
-                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0">
+                        <Grid Name="MovieGrid" Background="#FF2E2B2B" Margin="15,25,15,0" ShowGridLines="True">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />

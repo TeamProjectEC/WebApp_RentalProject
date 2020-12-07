@@ -77,20 +77,8 @@ namespace WebApp
 
         private void Click_Button_Moveis_List(object sender, RoutedEventArgs e)
         {
-            Context ctx = new Context();
-
-            var query = from a in ctx.Movie
-
-                        select new
-                        {
-                            ID = a.Id,
-                            Title = a.Title,
-                            Rating = a.Rating,
-                            Genre = a.Genre,
-
-                        };
-
-            dataView2.ItemsSource = query.ToList();
+            SearchWindow searchWindow = new SearchWindow();
+            searchWindow.Show();
 
         }
 
@@ -112,10 +100,7 @@ namespace WebApp
 
         }
 
-        private void Fill_DataGrid2(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
 
 
 

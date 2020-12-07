@@ -92,15 +92,6 @@
                 <DataGrid Name="dataView" SelectionChanged="Fill_DataGrid" Background="#FF6A6C70" Height="140"/>
             
         </Grid>
-        <!--Botton Display-->
-        <Grid Background="#FF6A6C70"  Margin="30,270,175,100">
-            <ScrollViewer Background="#FF6A6C70" Margin="0,0,0,0">
-                <DataGrid Name="dataView2" SelectionChanged="Fill_DataGrid2" Background="#FF6A6C70"/>
-            </ScrollViewer>
-
-        </Grid>
-        
-
-
+       
     </Grid>
 </Window>

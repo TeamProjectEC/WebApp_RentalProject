@@ -6,41 +6,28 @@
         xmlns:local="clr-namespace:WebApp"
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
-    <Grid >
-        <Grid Name="nav_logo"  VerticalAlignment="Top" Height="100"  Margin="0,0,0,0" >
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <Grid  Width="125" HorizontalAlignment="Right" Margin="0,50,0,0" >
-
-                <StackPanel  Grid.Column="0" Grid.RowSpan="1" Margin="0,-22,0,0">
-                    <TextBox Height="30" Text="Search Movie By Id" Name="textboxMovieSearch" BorderBrush="Beige" Background="DarkMagenta"></TextBox>
-
-
-                </StackPanel>
-            </Grid>
-            <Grid  Width="125" HorizontalAlignment="Right" Margin="0,55,0,0" >
-
-
-
-
-                <Button Name="SearchMovie"   Click="Submit_Click1" Background="Black" ></Button>
-
-            </Grid>
-
-
-
+    <Grid Background="#FF141515">
+        <Grid Name="nav_logo"  VerticalAlignment="Top" Height="88" Background="Black" >
             <Image Source="images/text_logo.png" Height="80" Width="250" HorizontalAlignment="Center" />
             <Image Source="images/logo.png" Height="100" Width="120" HorizontalAlignment="Left" Margin="0,5,0,5"/>
         </Grid>
+        <Grid Height="50" VerticalAlignment="Top" Margin="15,100,15,0" >
+            <Button Name="SearchMovie" Click="Submit_Click1" Content="Search" Height="25" Width="100" HorizontalAlignment="Left" Margin="200,0,0,0" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1D9B34"/>
+                        <GradientStop Color="#FF15AE48" Offset="0.525"/>
+                        <GradientStop Color="#FFF7F7F7" Offset="0.255"/>
+                        <GradientStop Color="#FF1CF71C" Offset="0.847"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="textboxMovieSearch" Height="25" Width="120" Text="Search Movie By Id" HorizontalAlignment="Left" Background="Black" Foreground="White" BorderBrush="#FF1D9B23" Margin="50,0,0,0" />
+        </Grid>
 
-        <Grid>
+        <Grid Margin="15,160,15,0">
 
-            <DataGrid Name="g1" AutoGenerateColumns="False" Margin="0,100,0,0">
+            <DataGrid Name="g1" AutoGenerateColumns="False" Margin="0,0,0,0">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Id}" Header="Movie Id" Width="50"></DataGridTextColumn>
