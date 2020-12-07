@@ -128,11 +128,19 @@
                                     <GradientStop Color="#FF4F1515" Offset="1"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
-                            <TextBox Text="Search" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Margin="0,0,200,0" Background="{x:Null}" Foreground="#FFEEE7E7" BorderBrush="#FF151313"/>
-                            <ComboBox VerticalAlignment="Center" HorizontalAlignment="Left" Width="180" Height="25" Margin="25,0,0,0" Background="{x:Null}" BorderBrush="#FF131212" Foreground="Black">
-                                <ComboBoxItem>Sort by name a-z</ComboBoxItem>
-                                <ComboBoxItem>Sort by highest rating</ComboBoxItem>
-                                <ComboBoxItem>Sort by lowest rating</ComboBoxItem>
+                            <Button Name ="Search" Content="Show All Movies" Foreground="White" Click="Button_SearchBox"  Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" Margin="0,0,200,0"  BorderBrush="Black">
+                            
+                                    <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black"/>
+                                        <GradientStop Color="#FF4D1717" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <ComboBox Name="Combobox" VerticalAlignment="Center" HorizontalAlignment="Left" Width="180" Height="25" Margin="25,0,0,0" Background="{x:Null}" BorderBrush="#FF131212" Foreground="Black">
+                                <ComboBoxItem Name="ComboBoxItem">Sort by name a-z</ComboBoxItem>
+                                <ComboBoxItem Name="C2">Sort by highest rating</ComboBoxItem>
+                                <ComboBoxItem Name="C3">Sort by lowest rating</ComboBoxItem>
                             </ComboBox>
                         </Grid>
                         <!--body-->
