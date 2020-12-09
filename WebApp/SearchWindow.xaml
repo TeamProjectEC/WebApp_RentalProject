@@ -22,7 +22,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBox x:Name="textboxMovieSearch" Height="25" Width="120" Text="Search Movie By Id" HorizontalAlignment="Left" Background="Black" Foreground="White" BorderBrush="#FF1D9B23" Margin="50,0,0,0" />
+            <TextBox x:Name="textboxMovieSearch" Height="25" Width="120" Text="" HorizontalAlignment="Left" Background="Black" Foreground="White" BorderBrush="#FF1D9B23" Margin="50,0,0,0" />
         </Grid>
 
         <Grid Margin="15,160,15,0">

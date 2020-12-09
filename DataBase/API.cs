@@ -41,9 +41,8 @@ namespace DataBase
         {
             return ctx.Movie.OrderBy(m => m.Title).Skip(skip_x).Take(take_x).ToList();
         }
-
-
-        public static bool RegisterSale(Customer customer, Movie movie)
+       
+         public static bool RegisterSale(Customer customer, Movie movie)
         {
 
             try
