@@ -13,15 +13,20 @@ using System.Windows.Shapes;
 using System.Linq;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using System.Data;
-
+using DataBase;
 
 namespace WebApp
 {
     /// <summary>
     /// Interaction logic for SearchWindow.xaml
     /// </summary>
+    /// 
+
+   
     public partial class SearchWindow : Window
     {
+        Context ctx = new Context();
+
         public SearchWindow()
         {
             InitializeComponent();
@@ -31,21 +36,8 @@ namespace WebApp
 
         private void binddatagrid()
         {
-            string connection = (
-             @"server=.\SQLEXPRESS;" +
-             @"database=SaleDatabase;" +
-             @"trusted_connection=true;" +
-             @"MultipleActiveResultSets=True"
-             );
-            SqlConnection con = new SqlConnection(connection);
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from  Movie ";
-            cmd.Connection = con;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            System.Data.DataTable dt = new System.Data.DataTable("Movie");
-            da.Fill(dt);
-            g1.ItemsSource = dt.DefaultView;
+           
+            g1.ItemsSource = ctx.Movie.ToArray();
 
 
 
@@ -55,39 +47,43 @@ namespace WebApp
 
             binddatagrid();
 
+        }
+        private void Search_Movies()
+        {
 
-            MessageBox.Show("Succeded");
+
 
         }
         private void Submit_Click1(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string connection = (
-            @"server=.\SQLEXPRESS;" +
-            @"database=SaleDatabase;" +
-            @"trusted_connection=true;" +
-            @"MultipleActiveResultSets=True"
-            );
-                SqlConnection con = new SqlConnection(connection);
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Movie Where Id =   " + textboxMovieSearch.Text, con);
+
+            //try
+            //{
+            //    string connection = (
+            //@"server=.\SQLEXPRESS;" +
+            //@"database=SaleDatabase;" +
+            //@"trusted_connection=true;" +
+            //@"MultipleActiveResultSets=True"
+            //);
+            //    SqlConnection con = new SqlConnection(connection);
+            //    con.Open();
+            //    SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Movie Where Id =   " + textboxMovieSearch.Text, con);
 
 
-                System.Data.DataTable dt1 = new System.Data.DataTable();
+            //    System.Data.DataTable dt1 = new System.Data.DataTable();
 
 
 
-                sda.Fill(dt1);
-                g1.ItemsSource = dt1.DefaultView;
-                sda.Update(dt1);
+            //    sda.Fill(dt1);
+            //    g1.ItemsSource = dt1.DefaultView;
+            //    sda.Update(dt1);
 
-            }
-            catch (Exception ex)
-            {
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
 
         
 
